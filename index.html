@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Tu Portafolio Web</title>
+</head>
+<body>
+  <nav></nav>
+  <header>
+    <div class="width-80 margin-auto display-flex height-30vw" id="isVisible">
+
+      <div class="width-50 display-flex flex-direction-column height-100 align-items-center justify-content-center">
+        <h4 class="width-fit-content margin-left-auto font-size-xx-large">Tu propio Portafolio Web</h4>
+        <p class="display-flex width-fit-content margin-left-auto font-size-x-large">
+          <span>Muestra tus proyectos de </span><strong id="projectTitle">PROGRAMACIÓN<span>&#160;</span></strong>
+        </p>
+      </div>
+
+      <div class="width-50 position-relative height-100 overflow-hidden" id="svgContainer">
+        <img src="./assets/svg/graphic.svg" alt="" id="frontSVG">
+      </div>
+    </div>
+  </header>
+  <section class="display-flex padding-35px">
+    <div class="width-80 margin-auto display-grid grid-template-columns-3" id="projectsContainer"></div>
+  </section>
+  <footer>
+    <p>
+      Información de contacto: <br> <br>
+      Correo electrónico: <a href="mailto:nolan1scott3@gmail.com">nolan1scott3@gmail.com</a> <br>
+      Teléfono: +52 81 1583 5723
+    </p>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+</html>
