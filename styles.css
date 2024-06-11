@@ -63,6 +63,9 @@ footer {
 .flex-direction-column {
   flex-direction: column;
 }
+.flex-wrap {
+  flex-wrap: wrap;
+}
 .display-grid {
   display: grid;
 }
@@ -70,6 +73,9 @@ footer {
   grid-template-columns: repeat(3, 1fr);
 
   gap: 3em;
+}
+.width-100 {
+  width: 100%;
 }
 .width-80 {
   width: 80%;
@@ -92,11 +98,20 @@ footer {
 .padding-35px {
   padding: 35px;
 }
+.padding-15px {
+  padding: 15px;
+}
+.margin-bottom-12px {
+  margin-bottom: 12px;
+}
 .font-size-xx-large {
   font-size: xx-large;
 }
 .font-size-x-large {
   font-size: x-large;
+}
+.font-size-large {
+  font-size: large;
 }
 .position-relative {
   position: relative;
@@ -110,6 +125,10 @@ footer {
 .overflow-hidden {
   overflow: hidden;
 }
+.text-align-center {
+  text-align: center;
+}
+
 
 .project-image {
   position: absolute;

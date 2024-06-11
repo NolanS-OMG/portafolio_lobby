@@ -140,6 +140,7 @@ for( let i=0; i<projects.length; i++ ) {
   const linkUrl = document.createElement("a");
   linkUrl.classList.add("project-link");
   linkUrl.href = projects[i].url;
+  linkUrl.target = "_blank";
   linkUrl.innerText = language ? projects[i].titleTrue : projects[i].titleFalse;
   console.log(linkUrl);
 
