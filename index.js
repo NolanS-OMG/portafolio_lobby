@@ -69,12 +69,9 @@ function increment(time) {
     elapsedTime = now - start;
   }
 
-  console.log( visible, elapsedTime );
-
   let delay = elapsedTime > 0 ? 0 : time;
 
   setTimeout( () => {
-    console.log( 'delay:', delay );
     increment(time);
   }, delay );
 }
@@ -96,16 +93,11 @@ increment(4000);
 document.addEventListener('visibilitychange', function() {
   visible = !document.hidden;
   if (visible) {
-    console.log('visible');
     start = Date.now();
-  } else {
-    console.log('not');
   }
 });
 
 const projectsContainer = document.getElementById("projectsContainer");
-console.log('ola');
-console.log(projectsContainer);
 
 const projects = [
   { 
@@ -129,29 +121,25 @@ const projects = [
 ];
 
 for( let i=0; i<projects.length; i++ ) {
-  console.log('oalalal');
   const pro = document.createElement("div");
   pro.classList.add("position-relative");
   pro.classList.add("overflow-hidden");
   pro.classList.add("display-flex");
   pro.classList.add("project-height");
-  console.log(pro);
+  pro.classList.add("project-height-phone");
 
   const linkUrl = document.createElement("a");
   linkUrl.classList.add("project-link");
   linkUrl.href = projects[i].url;
   linkUrl.target = "_blank";
   linkUrl.innerText = language ? projects[i].titleTrue : projects[i].titleFalse;
-  console.log(linkUrl);
 
   const image = document.createElement("img");
   image.classList.add("project-image");
   image.src = projects[i].image;
-  console.log(image);
 
   pro.appendChild(image);
   pro.appendChild(linkUrl);
-  console.log(pro);
 
   projectsContainer.appendChild(pro);
 }
