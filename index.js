@@ -97,6 +97,7 @@ document.addEventListener('visibilitychange', function() {
   }
 });
 
+const plantillasContainer = document.getElementById("plantillasContainer");
 const projectsContainer = document.getElementById("projectsContainer");
 
 const projects = [
@@ -119,6 +120,38 @@ const projects = [
     image: "./assets/images/victor.JPG"
   },
 ];
+const plantillas = [
+  { 
+    titleTrue: "Plantilla 01", 
+    titleFalse: "Template 01", 
+    url: "https://portafolio-plantilla01.netlify.app/",
+    image: "./assets/images/plantilla.JPG"
+  },
+];
+
+for( let i=0; i<plantillas.length; i++ ) {
+  const pro = document.createElement("div");
+  pro.classList.add("position-relative");
+  pro.classList.add("overflow-hidden");
+  pro.classList.add("display-flex");
+  pro.classList.add("project-height");
+  pro.classList.add("project-height-phone");
+
+  const linkUrl = document.createElement("a");
+  linkUrl.classList.add("project-link");
+  linkUrl.href = plantillas[i].url;
+  linkUrl.target = "_blank";
+  linkUrl.innerText = language ? plantillas[i].titleTrue : plantillas[i].titleFalse;
+
+  const image = document.createElement("img");
+  image.classList.add("project-image");
+  image.src = plantillas[i].image;
+
+  pro.appendChild(image);
+  pro.appendChild(linkUrl);
+
+  plantillasContainer.appendChild(pro);
+}
 
 for( let i=0; i<projects.length; i++ ) {
   const pro = document.createElement("div");
